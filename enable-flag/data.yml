@@ -1,0 +1,28 @@
+{
+  "feature_flags": {
+    "new_checkout_ui": {
+      "default": false,
+      "overrides": {
+        "env:staging": true,
+        "service:billing-api": true,
+        "user:alice": true
+      }
+    },
+    "dark_mode": {
+      "default": true,
+      "overrides": {
+        "env:production": false,
+        "user:bob": false,
+        "service:admin-panel": false
+      }
+    },
+    "beta_search": {
+      "default": false,
+      "overrides": {
+        "user:test_user": true,
+        "env:staging": true
+      }
+    }
+  }
+}
+
